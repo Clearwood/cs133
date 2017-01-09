@@ -1,0 +1,21 @@
+#!/bin/sh
+sum = 0
+li = 0
+if [ $(expr $# % 2) != "0"  ]
+then 
+	echo "Use an even number of arguments!">&2; exit 1;
+fi
+for a in $*
+do
+if [ li = 0  ]
+then
+	sum = $a;
+else
+	sum = let sum + $a;
+	echo sum
+	echo "\n"
+	li = 0;
+fi
+done 
+exit 0
+

@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{OldCommits}
+Atlassian.
+\newblock Viewing old commits.
+\newblock \url{https://www.atlassian.com/git/tutorials/viewing-old-commits/}.
+\newblock Accessed: 2016-12-30.
+
+\bibitem{CommandLineTools11}
+Chad Perrin.
+\newblock Five benefits of command line tools.
+\newblock {\em techrepublic.com}, 2011.
+\newblock Accessed: 2016-12-30.
+
+\bibitem{GitBranch}
+Ben~Straub Scott~Chacon.
+\newblock {\em Pro Git}.
+\newblock Apress, second edition, 2014.
+
+\end{thebibliography}

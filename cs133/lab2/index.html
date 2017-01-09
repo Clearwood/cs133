@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS133 Professional Skills Lab Diary</title>
+<link rel="stylesheet" type="text/css" href="../diary.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <style>
+  @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300');
+#main{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 200%;
+}
+#nav a{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 200%;
+}
+
+  </style>
+  </head>
+
+<body>
+<nav class="nav navbar-default" id="nav">
+<div class="container-fluid">
+<a class="navbar-brand" href="../index.html">
+ HOME
+</a>
+<a class="navbar-brand" href="../lab1/index.html">LAB 1</a>
+		<a class="navbar-brand" href="../lab3/index.html">LAB 3</a>
+		<a class="navbar-brand" href="../lab4/index.html">LAB 4</a>
+		<a class="navbar-brand" href="../lab5/index.html">LAB 5</a>
+		<a class="navbar-brand" href="../lab6/index.html">LAB 6</a>
+</div>
+</nav>
+<div class="container-fluid">
+<h1>Lab 2: Version Control</h1>
+The second lab was all about version control software which I found very helpful to manage my CS118 coursework in the following weeks.
+The time of the lab was perfect for me to help me with my exercises in other modules.
+I used git on an example file <a href="./ex1.html">ex1.html</a> to test out this piece of version control software.
+<h2>Exercises:</h2>
+<ol>
+
+	<li>
+	The first thing I did was to initialise the git repository.
+	<div class="code">git init</div>
+	</li>
+
+	<li>
+	After the creation of the git repo I added the example file to it.
+	<div class="code">git add ex1.html</div>
+	</li>
+	
+	<li> After that I commited the changes:
+	<div class="code">git commit -m "Added a new web page"
+	</div></li>
+  <li>Finally for the version control part of this lab I identified myself to the system:
+  <div class="code">git config --global user.name "Keno Budde" </div>
+  <div class="code">git config --global user.email "k.budde(at)warwick.ac.uk"</div>
+</li>
+  <li> Moving on from this part I corrected the ex1.html and validated it using the online validator provided.
+  </li>
+<li>After this part it was all about Cascadian Style Sheet, a possibility to style webpages. In this lab it was about using the <code>id</code> attribute to modify specific elements
+and the difference between relative and absolute positioning of elements.
+  </li>
+ <li>Finally I validated the css file created for this exercise.
+  </li>
+</ol>
+
+<h2>Commands:</h2>
+<ul>
+	<li><code>git init</code>: Initialises a directory with git. An example might be
+	<div class="code">git init cs133</div>
+	</li>
+
+  <li><code>git add</code>: Adds a file to a repository. An example might be
+    <div class="code"> git add ./index.html
+    </div>
+    <li><code>git commit</code>: Has to be used with the <code> -m </code> flag to specify  a description of the changes. An example would be:
+	<div class="code">git commit -m "changed color of every h1 element to red"</div>
+	</li>
+    <li><code>git config</code>: to edit the git config file, for example to specify an email adress:
+	<div class="code">git config --global user.email "k.budde(at)warwick.ac.uk"</div>
+	</li>
+	<li><code>git diff</code>: Lists the changes made relative to the index. </li>
+	
+	
+	
+</ul>
+</div>
+</body>
+</html>

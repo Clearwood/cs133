@@ -1,0 +1,12 @@
+Directory hey has the wrong permission: drwxrwxrwx\n
+This has been changed to: drwxr-xr-x\n
+Directory hey/ has the wrong permission: drwxrwxrwx\n
+This has been changed to: drwxr-xr-x\n
+Directory hey/hey has the wrong permission: drwxrwxrwx\n
+This has been changed to: drwxr-xr-x\n
+Directory hey/hey/hey.txt has the wrong permission: drwxrwxrwx\n
+This has been changed to: -rw-r--r--\n
+Directory hey/s.pptx has the wrong permission: drwxrwxrwx\n
+This has been changed to: -rw-r--r--\n
+Directory hey/xaa has the wrong permission: drwxrwxrwx\n
+This has been changed to: -rw-r--r--\n

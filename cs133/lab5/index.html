@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS133 Professional Skills Lab Diary</title>
+<link rel="stylesheet" type="text/css" href="../diary.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+<body>
+<nav class="nav navbar-default" id="nav">
+<div class="container-fluid">
+<a class="navbar-brand" href="../index.html">
+ HOME
+</a>
+<a class="navbar-brand" href="../lab1/index.html">LAB 1</a>
+		<a class="navbar-brand" href="../lab2/index.html">LAB 2</a>
+		<a class="navbar-brand" href="../lab3/index.html">LAB 3</a>
+		<a class="navbar-brand" href="../lab4/index.html">LAB 4</a>
+		<a class="navbar-brand" href="../lab6/index.html">LAB 6</a>
+</div>
+</nav>
+<div class="container-fluid">
+<h1>Lab 5: Advanced Scripting and Regular Expressions</h1>
+Bash scripting never was very intuitive to me but regular expressions were even more difficult for me to understand.
+<h2>Exercises:</h2>
+<ol>
+<h4>Functions in bash</h4>
+	<li>
+    The basic idea of bash functions was not to difficult for me to understand, coming from a C background. The biggest difficulty for me proved to be
+	that bash functions can not return any arbitrary values. Therefore my fibbonaci function has to directly output to the standard output stream.
+	<div class="container-fluid wrapper">
+  <pre class="cod prettyprint">
+	function fib {
+i=0
+fib=0
+while [ $i -lt $1 ]
+do
+ 	i=$[ $i+1 ]
+	fib=$[ $fib+i ]
+done
+echo "$fib"
+}
+</pre>
+</div>
+	</li>
+<h4>Redirecting and using pipes</h4>
+	<li>
+	Redirecting an output stream to a text file or using a text file as input was something I did before coming to university so I did not feel uncomfortable doing that.
+	Redirecting output is fairly simple, a command is called using the greater than symbol to redirect the output. An example for the redirection of the output to
+	would be:
+	<div class="code">ls > list.txt</div>
+	An example to redirect input into a command would be:
+	<div class="code">wc -l < list.txt</div>
+	Using pipes had not been anything new for me too. Basically it allows to give the standard output of one command to another command and than display the output of the last command.
+	<div class="code">ls -lt | head</div>
+	</li>
+	<h4>Regular Expressions</h4>
+	<li> Regular expressions can be used to filter input. Using regular expressions I reimplemented a sum script from a previous lab in one line, by replacing every space with a plus symbol and than summing everything together.
+	<div class="container-fluid wrapper">
+  <pre class="cod prettyprint">
+	´#!/bin/bash
+echo $(expr $(echo $* | sed 's/[ ]/+/g'))
+exit 0
+</pre>
+</div>
+I could not come up with a solution to filter out every word beginning with "w" out of a html document.
+	</li>
+</ol>
+
+<h2>Commands:</h2>
+<ul>
+	<li><code>></code> and <code><</code>: Enables the user to redirect output to a file or redirects a file to input.
+	</li>
+  <li><code>|</code>: Gives the possibility to use the standard output of one command as a standard input for another command.
+    </li>
+</ul>
+</div>
+</body>
+</html>

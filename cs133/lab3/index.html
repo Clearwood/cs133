@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
+<title>CS133 Professional Skills Lab Diary</title>
+<link rel="stylesheet" type="text/css" href="../diary.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+<body>
+<nav class="nav navbar-default" id="nav">
+<div class="container-fluid">
+<a class="navbar-brand" href="../index.html">
+ HOME
+</a>
+<a class="navbar-brand" href="../lab1/index.html">LAB 1</a>
+		<a class="navbar-brand" href="../lab2/index.html">LAB 2</a>
+		<a class="navbar-brand" href="../lab4/index.html">LAB 4</a>
+		<a class="navbar-brand" href="../lab5/index.html">LAB 5</a>
+		<a class="navbar-brand" href="../lab6/index.html">LAB 6</a>
+</div>
+</nav>
+<div class="container-fluid">
+<h1>Lab 3: UNIX Processes and Scripting</h1>
+This lab was all about UNIX processes and bash scripting. In a UNIX environment applications are called processes.
+<h2>Exercises:</h2>
+<h3>UNIX processes</h3>
+<ol>
+	<li>
+	The first thing I did was executing different processes in the background, for example kwrite:
+	<div class="code container-fluid">kwrite &</div>
+	</li>
+
+	<li>
+	After that I combined two command with the <code>|</code> operator.
+	<div class="code container-fluid">ps | grep kwrite</div>
+	</li>
+	
+	<li> After playing a bit with the possibilities the combination of two different command would give me I tried out killing a process with the 
+	<code>pkill</code> command. My ideas why this might not be the perfect way to terminate a program are that it is still possible that the program is running
+	in the background when not all processes linked to the programm are terminated why I believe the xkill command is a better way to terminate a malfunctioning 
+	program in most cases.
+	</li>
+	</ol>
+<h3>Scripting</h3>
+	<ol>
+  <li> The first thing I did was working on the runloop script provided. The script started the infinite java while loop. Using the <code>kill</code> command I terminated the java runtime environment.
+</li>
+  <li> After that I extended the script provided to terminate itself after 5 seconds using the timeout command:
+  <div class="wrapper container-fluid">
+  <pre class="prettyprint cod">
+#!/bin/bash
+javac Loop.java
+timeout 5s java Loop
+</pre>
+  </div>
+  </li>
+<li>After this part I wrote a script to sum numbers. Basically what it does is the bash script loops over the arguments inputted, checks if they are numbers and if they are
+it adds them to a variable, otherwise it outputs an error to the error output stream.
+<div class="container-fluid wrapper">
+<pre class="prettyprint cod">
+#!/bin/sh
+sum=0
+ for a in $*
+do
+	case $a in 
+[0-9]*) 
+
+	let sum=sum+a;
+;;
+    *) echo "Arguments must be numbers.">&2; exit 1;;
+	esac
+done
+echo "$sum"
+exit 0 
+</pre>
+</div>
+If all arguments were numbers the script outputs the result and exits.
+  </li>
+ <li>The final script in this lab was all about summing pairs of numbers.
+ The only error checking I did here was to check if the number of arguments was even.
+ <div class="container-fluid wrapper">
+ <pre class="prettyprint cod">
+ #!/bin/sh
+sum = 0
+li = 0
+if [ $(expr $# % 2) != "0"  ]
+then 
+	echo "Use an even number of arguments!">&2; exit 1;
+fi
+for a in $*
+do
+if [ li = 0  ]
+then
+	sum = $a;
+else
+	sum = let sum + $a;
+	echo sum
+	echo "\n"
+	li = 0;
+fi
+done 
+exit 0
+ </pre>
+ 
+ </div>
+  </li>
+</ol>
+
+<h2>Commands / operators:</h2>
+<ul>
+	<li>the <code>&</code> operator: Enables the user to run a process in the background. Example:
+	<div class="code">kwrite &</div>
+	</li>
+
+  <li><code>ps</code>: Inspects all processes which are running right now. </li>
+    <li><code>pkill</code>: Can be used to kill a process.
+	</li>
+    <li><code>|</code>: passes the output of one command to another. For example:
+	<div class="code">ps | grep kwrite</div>
+	</li>
+	<li><code>git diff</code>: Lists the changes made relative to the index. </li>
+	
+	
+	
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+#!/bin/bash
+javac Loop.java
+timeout 5s java Loop

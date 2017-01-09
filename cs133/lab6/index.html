@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS133 Professional Skills Lab Diary</title>
+<link rel="stylesheet" type="text/css" href="../diary.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+
+<body>
+<nav class="nav navbar-default" id="nav">
+<div class="container-fluid">
+<a class="navbar-brand" href="../index.html">
+ HOME
+</a>
+<a class="navbar-brand" href="../lab1/index.html">LAB 1</a>
+		<a class="navbar-brand" href="../lab2/index.html">LAB 2</a>
+		<a class="navbar-brand" href="../lab3/index.html">LAB 3</a>
+		<a class="navbar-brand" href="../lab4/index.html">LAB 4</a>
+		<a class="navbar-brand" href="../lab5/index.html">LAB 5</a>
+</div>
+</nav>
+<div class="container-fluid">
+<h1>Lab 6: Advanced LaTeX</h1>
+This Lab was probably one of my favorite ones, giving me the possibility to spending some more time with LaTeX.
+<h2>Exercises:</h2>
+<ol>
+<h4>BibTeX</h4>
+	<li>
+	Creating a bibliography was very straightforward, not giving me any problems. A bibliography is a helpful tool to reference quote.
+	I created several example entries to my bibliography to get started:
+	<div class="container-fluid wrapper">
+  <pre class="cod prettyprint">
+@book{SeinZeit,
+	author = "Martin Heidegger",
+	title = "Sein und Zeit",
+	edition = "19. Auflage",
+	publisher = "Niemeyer",
+	year = "1927"
+}
+@book{ArsArmatoria,
+	author = "Publius Ovidius Naso",
+	title = "ars armatoria",
+	year = "0",
+	publisher = "SPQR"
+}
+@article{OpioidCrisis,
+	author = "Julie Bosman",
+	title = "Inside a Killer Drug Epidemic: A Look at America’s Opioid Crisis",
+	journal = "The New York Times",
+	year = "2017"
+}
+  </pre>
+  </div>
+	</li>
+<h4>Citing</h4>
+	<li>
+	Citing of a BibTeX reference is very easy. The command <code>\cite{label}</code> has to be used to cite but apart from that the only other thing to do is to set the bibliography and the referencing style
+	at the end of the document.
+	</li>
+	<h4>Style</h4>
+	<li>The only thing I did about playing around with styles was using the IEEE Transactions style for referencing and as the referencing style by setting the commands appropiately.
+	<div class="container-fluid wrapper">
+	<pre class="cod prettyprint">
+	\documentclass{IEEEtran}
+	\bibliographystyle{ieeetr}
+	</pre>
+	</div></li>
+	<h4>Algorithms</h4>
+  <li>Writing algorithms in LaTeX is pretty easy too, thanks to the easy to use algorithm environment. To use the environment, the algorithmic package has to be imported:
+  <code>\usepackage{algorithmic}</code>
+  Every algorithm in LaTeX is written within that algorithmic environment:
+  <div class="wrapper container-fluid">
+  <pre class="cod prettyprint">
+\begin{algorithmic}
+\STATE $S=0$
+\end{algorithmic}
+</pre>
+</div>
+Wrapping this environment within an algorithm environment allows the user to give the algorithm a label and to freely place it on the page.
+</li>
+<h4>Source Code listings</h4>
+  <li> Using the <code>listings</code> package, it is possible to directly include source code into a LaTeX document and to correctly color encode it.
+  This environment is highly configurable which means that for example specific color settings can be made.
+  </li>
+</ol>
+
+<h2>Commands:</h2>
+<ul>
+	<li><code>\bibliography{file name}</code>: defines a bibliography used for the document.
+	</li>
+  <li><code>\bibliographystyle{style}</code>: defines the referencing style.
+    </li>
+	<h5>algorithmic environment</h5>
+    <li><code>\STATE text</code>: a normal statement.
+	</li>
+    <li><code>\IF{condition} \STATE{text} \ELSE \STATE{text} \ENDIF</code>: the normal if statement.
+	</li>
+	<li><code>\FOR{condition} \STATE{text} \ENDFOR</code>: To display a basic for loop.</li>
+	<li><code>\WHILE{condition} \STATE{text} \ENDWHILE</code>: a basic while loop.</li>
+	<li><code>\REPEAT \STATE{text} \UNTIL{condition}</code>: a basic while loop.</li>
+	<li><code>\PRINT text</code>: creates a print statement.</li>
+	<h5>listings environment</h5>
+	<li><code>\lstset{language=programming language}</code>: sets the language in which the following code is written.</li>
+	<li><code>\lstinputlisting{source_filename}</code>: allows to import code from a source file.</li>
+</ul>
+</div>
+</body>
+</html>

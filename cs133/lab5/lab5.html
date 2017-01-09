@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+    <head>
+        <base href="http://www2.warwick.ac.uk/fac/sci/dcs/teaching/material/cs133/term1/labs/lab5/">
+
+        <meta charset="iso-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CS133 Lab 5: Advanced Scripting and Regular Expressions</title>
+
+<meta name="description" content="">
+<meta name="keywords" content="CS133, Professional Skills, Pro Skills, Lab 3">
+
+<link rel="search" type="application/opensearchdescription+xml" title="Warwick Search" href="//search.warwick.ac.uk/static/search/osd.xml">
+
+<!-- Google canonical URL - the main URL for this page -->
+
+    
+    
+        <link rel="canonical" href="http://www2.warwick.ac.uk/fac/sci/dcs/teaching/material/cs133/term1/labs/lab5/">
+    
+
+
+
+
+  
+
+
+
+    <meta name="robots" content="noindex,nofollow">
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://www2.warwick.ac.uk/static_war/render/id7/images/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://www2.warwick.ac.uk/static_war/render/id7/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://www2.warwick.ac.uk/static_war/render/id7/images/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://www2.warwick.ac.uk/static_war/render/id7/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://www2.warwick.ac.uk/static_war/render/id7/images/favicon-16x16.png" sizes="16x16">
+<meta name="msapplication-TileImage" content="http://www2.warwick.ac.uk/static_war/render/id7/images/mstile-144x144.png">
+
+
+    
+        <meta name="msapplication-TileColor" content="#3f4246">
+        <meta name="theme-color" content="#3f4246">
+    
+    
+
+
+
+
+
+<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+    
+    
+        <link rel="stylesheet" href="http://www2.warwick.ac.uk/static_war/render/id7/css/pack7.css.136788421307" type="text/css">
+    
+
+
+
+
+    
+    
+    
+        <link rel="shortcut icon" type="image/x-icon" href="http://www2.warwick.ac.uk/static_war/render/id7/images/favicon.ico">
+    
+
+
+
+
+
+    <link rel="stylesheet" href="http://www2.warwick.ac.uk/static_site/fac/sci/dcs/site.css.227959534605" type="text/css">
+
+
+
+
+
+
+
+    
+    
+        <script type="text/javascript" src="http://www2.warwick.ac.uk/static_war/render/scripts/id7scripts.js.138753902675"></script>
+    
+
+
+
+
+
+    <script type="text/javascript" src="http://www2.warwick.ac.uk/static_site/fac/sci/dcs/site.js.156079742119"></script>
+
+
+<!-- HTML5 shim for IE8 support of HTML5 elements -->
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://www2.warwick.ac.uk/static_war/render/scripts/html5shiv-3.7.2.min.js.160815134719"></script>
+<![endif]-->
+
+
+
+
+<script type="text/javascript">
+    SitebuilderInfo.url = '/fac/sci/dcs/teaching/material/cs133/term1/labs/lab5';
+    SitebuilderInfo.lastUpdated = 1477063289071;
+    SitebuilderInfo.lastContentUpdated = 1444722455746;
+    SitebuilderInfo.buildTimestamp = '160815134719';
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="alternate"
+      type="application/rss+xml"
+      title="Changes in /fac/sci/dcs/ (RSS 2.0)"
+      href="http://www2.warwick.ac.uk/sitebuilder2/api/rss/siteChanges.rss?page=/fac/sci/dcs">
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+            
+            
+            
+            
+                <script type="text/javascript">
+Event.onDOMReady(function() { var email2146128218 = '<a href="mai';
+email2146128218 += 'lto:&#99;';
+email2146128218 += '&#111;&#109;&#112;&#x2';
+email2146128218 += 'd;&#115;&#x63;&#x69;';
+email2146128218 += '&#x40;&#100;';
+email2146128218 += '&#9';
+email2146128218 += '9;&#115';
+email2146128218 += ';&#46;&#';
+email2146128218 += '119;&#97;&#x72;&#x77;&#x69;';
+email2146128218 += '&#9';
+email2146128218 += '9;&#x6b;&#46;&#97;&#99;&#x2e;&#117;&#107;">&#99;&#11';
+email2146128218 += '1;&#x6d;&#x70;&#45;&#x73;&#99;&';
+email2146128218 += '#105;&#64;';
+email2146128218 += '&#100;&#99;&#';
+email2146128218 += '115;&#46;&#x77;&#x61;&#114;&#119;&#105;&#x63;&#107;&#x2e;&#97;&#x63;';
+email2146128218 += '&#x2e;&#x75;&#107;<\/a>';
+if(document.getElementById('email2146128218')) document.getElementById('email2146128218').innerHTML = email2146128218;
+});
+</script>
+            
+        
+    
+
+
+    </head>
+
+    
+    
+    
+    
+        
+    
+
+    <body class="in-fac in-sci in-dcs in-teaching in-material in-cs133 in-term1 in-labs in-lab5">
+        <div class="id7-left-border"></div>
+        <div class="id7-fixed-width-container">
+
+            <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+            <header class="id7-page-header">
+                <div class="id7-utility-masthead">
+    <nav class="id7-utility-bar">
+    <ul>
+        
+            
+
+            
+                
+<li id="toggle-text-only-link"><a accesskey="t" href="http://text.www2.warwick.ac.uk/fac/sci/dcs/teaching/material/cs133/term1/labs/lab5/?external=true" rel="nofollow" class="ut" >Text only</a> </li>
+            
+
+            
+                
+                    
+                    
+<li id="notify-link"><a  href="http://www2.warwick.ac.uk/sitebuilder2/user/page/notifications.htm?page=/fac/sci/dcs/teaching/material/cs133/term1/labs/lab5/" rel="nofollow" class="ut" >Notify</a> </li>
+                
+            
+
+            
+
+            
+        
+
+        
+            
+                
+                
+                
+                    
+                        
+<li id="account-link"><a  href="https://websignon.warwick.ac.uk/origin/logout?target=http%3A%2F%2Fwww2.warwick.ac.uk%2Ffac%2Fsci%2Fdcs%2Fteaching%2Fmaterial%2Fcs133%2Fterm1%2Flabs%2Flab5%2F" rel="nofollow" class="ut" data-toggle="id7:account-popover" data-loginlink="https://websignon.warwick.ac.uk/origin/slogin?shire=https%3A%2F%2Fwww2.warwick.ac.uk%2Fsitebuilder2%2Fshire-read&amp;providerId=urn%3Awww2.warwick.ac.uk%3Asitebuilder2%3Aread%3Aservice&amp;target=http%3A%2F%2Fwww2.warwick.ac.uk%2Ffac%2Fsci%2Fdcs%2Fteaching%2Fmaterial%2Fcs133%2Fterm1%2Flabs%2Flab5%2F" data-usercode="u1632823" data-name="Keno Budde" >Sign out</a> </li>
+                    
+                    
+                
+            
+            
+        
+    </ul>
+</nav>
+    <div class="id7-masthead">
+    <div class="id7-masthead-contents">
+        <div class="clearfix">
+            <div class="id7-logo-column">
+                
+                    <div class="id7-logo-row">
+                        <div class="id7-logo">
+                            <a href="http://warwick.ac.uk" title="Warwick home page">
+                                <img src="http://www2.warwick.ac.uk/static_war/render/id7/images/shim.gif" alt="Warwick">
+                            </a>
+                        </div>
+
+                        
+                            
+                            
+                                <nav class="id7-site-links">
+                                    <ul>
+                                        <li><a href="http://warwick.ac.uk/study">Study</a></li>
+                                        <li><a href="http://warwick.ac.uk/research">Research</a></li>
+                                        <li><a href="http://warwick.ac.uk/business">Business</a></li>
+                                        <li><a href="http://warwick.ac.uk/alumni">Alumni</a></li>
+                                        <li><a href="http://warwick.ac.uk/news">News</a></li>
+                                        <li><a href="http://warwick.ac.uk/about">About</a></li>
+                                    </ul>
+                                </nav>
+                            
+                        
+                    </div>
+                
+            </div>
+            <div class="id7-search-column">
+                
+                    <div class="id7-search">
+                        <form action="//search.warwick.ac.uk/website" role="search">
+                            <input type="hidden" name="source" value="http://www2.warwick.ac.uk/fac/sci/dcs/teaching/material/cs133/term1/labs/lab5/">
+                            <div class="form-group">
+                                <label class="sr-only" for="id7-search-box">Search</label>
+                                <div class="id7-search-box-container">
+                                    <input type="search" class="form-control input-lg" id="id7-search-box" name="q" placeholder="Search Warwick" data-suggest="go">
+                                    <i class="fa fa-search fa-2x"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="id7-header-text clearfix">
+            <h1>
+                
+
+                
+                
+
+                <span class="id7-current-site-link" data-short-title="DCS">
+                    <a accesskey="1" title="Computer Science home page [1]" href="/fac/sci/dcs/">Department of Computer Science</a>
+                </span>
+            </h1>
+        </div>
+    </div>
+</div>
+</div>
+
+                
+                <div class="id7-navigation">
+                    <nav class="navbar navbar-primary hidden-xs" role="navigation"> <ul class="nav navbar-nav"><li class="first dropdown" data-lastmodified="1477401758140"> <a href="/fac/sci/dcs/admissions/" data-page-url="/fac/sci/dcs/admissions/"> Admissions </a> <ul class="dropdown-menu" role="menu"><li data-lastmodified="1477401758140"> <a href="/fac/sci/dcs/admissions/undergraduate/" data-page-url="/fac/sci/dcs/admissions/undergraduate/"> Undergraduate </a> </li><li data-lastmodified="1477401758140"> <a href="/fac/sci/dcs/admissions/postgraduate/" data-page-url="/fac/sci/dcs/admissions/postgraduate/"> Postgraduate Taught </a> </li><li data-lastmodified="1477401758140"> <a href="/fac/sci/dcs/admissions/postgraduateresearch/" data-page-url="/fac/sci/dcs/admissions/postgraduateresearch/"> Postgraduate Research </a> </li></ul> </li><li class="next-secondary active second dropdown recently-updated" data-lastmodified="1478537498006"> <a href="/fac/sci/dcs/teaching/" data-page-url="/fac/sci/dcs/teaching/"> Teaching </a> <ul class="dropdown-menu" role="menu"><li data-lastmodified="1477063289071"> <a href="/fac/sci/dcs/teaching/courses/" data-page-url="/fac/sci/dcs/teaching/courses/"> Course Structures </a> </li><li class="protected" data-lastmodified="1477063289071"> <a href="/fac/sci/dcs/teaching/handbook/" data-page-url="/fac/sci/dcs/teaching/handbook/"> Student Handbook <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a> </li><li class="protected" data-lastmodified="1477063289071"> <a href="/fac/sci/dcs/teaching/phd/" data-page-url="/fac/sci/dcs/teaching/phd/"> Research Student Handbook <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a> </li><li class="protected recently-updated" data-lastmodified="1478539948265"> <a href="/fac/sci/dcs/teaching/material/" data-page-url="/fac/sci/dcs/teaching/material/"> Online Material <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a> </li></ul> </li><li data-lastmodified="1477063289071"> <a href="/fac/sci/dcs/research/" data-page-url="/fac/sci/dcs/research/"> Research </a></li><li data-lastmodified="1478085295894"> <a href="/fac/sci/dcs/people/" data-page-url="/fac/sci/dcs/people/"> People </a></li><li data-lastmodified="1478004469756"> <a href="/fac/sci/dcs/outreach/" data-page-url="/fac/sci/dcs/outreach/"> Outreach </a></li><li class="dropdown recently-updated" data-lastmodified="1478512735604"> <a href="/fac/sci/dcs/events/" data-page-url="/fac/sci/dcs/events/"> Events </a> <ul class="dropdown-menu" role="menu"><li class="recently-updated" data-lastmodified="1478278028705"> <a href="/fac/sci/dcs/events/departmentseminars/" data-page-url="/fac/sci/dcs/events/departmentseminars/"> Department Seminars </a> </li></ul> </li><li class="protected" data-lastmodified="1477063289071"> <a href="/fac/sci/dcs/intranet/" data-page-url="/fac/sci/dcs/intranet/"> Intranet <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a></li></ul></nav><nav class="navbar navbar-secondary" role="navigation"> <ul class="nav navbar-nav"><li class="nav-breadcrumb first recently-updated" data-lastmodified="1478537498006"> <a href="/fac/sci/dcs/teaching/" data-page-url="/fac/sci/dcs/teaching/"> Teaching </a></li><li class="nav-breadcrumb second protected recently-updated" data-lastmodified="1478539948265"> <a href="/fac/sci/dcs/teaching/material/" data-page-url="/fac/sci/dcs/teaching/material/"> Online Material <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a></li><li class="nav-breadcrumb protected recently-updated" data-lastmodified="1478539948265"> <a href="/fac/sci/dcs/teaching/material/cs133/" data-page-url="/fac/sci/dcs/teaching/material/cs133/"> CS133 <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a></li><li class="nav-breadcrumb protected" data-lastmodified="1477063289071"> <a href="/fac/sci/dcs/teaching/material/cs133/term1/" data-page-url="/fac/sci/dcs/teaching/material/cs133/term1/"> Term 1 <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a></li><li class="nav-breadcrumb protected" data-lastmodified="1477063289071"> <a href="/fac/sci/dcs/teaching/material/cs133/term1/labs/" data-page-url="/fac/sci/dcs/teaching/material/cs133/term1/labs/"> Labs <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a></li><li class="active nav-breadcrumb last protected" data-lastmodified="1477063289071"> <a data-page-url="/fac/sci/dcs/teaching/material/cs133/term1/labs/lab5/"> Lab 5 <i class="fa fa-lock discreet" title="Restricted permissions"></i> </a></li></ul></nav>
+                </div>
+            </header>
+
+            
+            <main id="main" class="id7-main-content-area">
+                <header>
+                    <div class="id7-horizontal-divider">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" version="1.1" width="1130" height="41" viewBox="0, 0, 1130, 41">
+                            <path d="m 0,0.5 1030.48, 0 22.8,40 16.96,-31.4 16.96,31.4 22.8,-40 20,0" class="divider" stroke="#383838" fill="none" />
+                        </svg>
+                    </div>
+
+                    <div class="id7-page-title">
+                        <h1>
+                            
+                            
+                                CS133 Lab 5: Advanced Scripting and Regular Expressions
+                            
+                        </h1>
+                    </div>
+                </header>
+
+                
+
+                
+                <div class="id7-main-content">
+                    
+
+                    <div class="layout layout-100">
+                        <div class="column-1"><div class="column-1-content">
+                            
+                                
+                                    
+
+<p>You have now gained some familiarity with a UNIX environment, studied the management of processes and developed a working knowledge of scripting. The aim of this lab session is to further develop your scripting abilities and equip you with a basic understaning of regular expressions - a very useful mechanism that allows you to process text by specifying a pattern for a string to be matched or replaced. Since it will be very difficult for you to appreciate the significance and applicability of regular expressions in just one lab, you are strongly encouraged to read about them in the module lecture note and relevant textbooks.</p>
+
+<p>If you find these exercises too difficult, you may find it useful to look at the <code>infotutorial</code> script, from lab 1, which contains several examples.<br />
+   <br />
+   Remember to record what you have done for this lab in your lab diary. If you have any questions regarding your lab diary then please ask a module tutor.</p>
+
+<h3>Advanced Scripting</h3>
+
+<p>Having got to grips with the basics of bash scripting we will now look at a few more complex scripting exercises.</p>
+
+<p>Functions in bash are a useful way to ensure that you don't have to repeatedly write similar code. Much like their counterparts in C and Java, a function can be viewed as a block of code that implements a set of operations. You can think of it as being like a <span class="QUOTE">black-box</span> that performs a specified task. Wherever you have repetitive code or a task being repeated with only slight variations then you should consider using a function.</p>
+
+<p>There are two ways to declare a function in bash, both of which are shown in the examples below. The second of these structures should be particularly familiar if you have done amount of C programming.</p>
+
+<pre><span class="bluebox2">function function_name {<br />     echo &quot;Hello&quot;<br />}</span><br /><span class="bluebox2">function_name () {<br />    echo &quot;Hello&quot;<br />}</span></pre>
+<p>There are a few key things to remember when writing functions:</p>
+
+<ul>
+  <li>Calls to functions are made by simply using the name of the function you wish to call.</li>
+  <li>The definition of a function must precede the first call to it.</li>
+  <li>The body of functions can not be empty.</li>
+  <li>It is possible to nest functions within functions and other control structures, though this is not particularly useful or advisable.</li>
+</ul>
+
+<p>There are also a few key differences between functions in bash and other programming languages:</p>
+
+<ul>
+  <li>Bash functions do not allow you to return arbitrary values to the caller; they instead return their status: zero for success, non-zero for failure. Whilst this matches how most Unix programs return, it can seem a little counter-intuitive at times. If you want to return a result there are a couple of ways to do so. Look into the idea of scoping in Bash and see if you can think of some.</li>
+  <li>Bash functions also handle parameters differently than many pure programming languages you may have encountered. Rather than having named parameters, bash simply refers to the first parameter as <code>$1</code>, the second as <code>$2</code>, etc. Compare this with how you referred to variables passed to the <em>script</em> in earlier labs. As such, you don't specify parameters when defining the function signature.</li>
+</ul>
+
+<p>To give you a more concrete understanding of functions in bash you should try to implement a function called <code>fib</code> that will calculate the nth fibonacci number. For example, when called with 6 the function should print 8. To help you out with the some of the practicalities, a function which is designed to use your <code>fib</code> is given below.</p>
+
+<pre><span class="bluebox2">function main {<br />    echo &quot;What fib should I calculate?&quot;<br />    read n<br />    fib $n<br />    exit 0<br />}</span></pre>
+<p>Remember to actually call this main function in your script.</p>
+
+<p>Input/Output (I/O) Redirection is another important issue when scripting in a UNIX environment. There are always three default files open, <tt class="FILENAME">stdin</tt> (the keyboard), <tt class="FILENAME">stdout</tt> (the screen), and <tt class="FILENAME">stderr</tt> (error messages output to the screen). These, as well as any other open files, can be redirected. Redirection simply means capturing output from a file, command, application or script, and sending it as input to another file, command, application or script. Every open file gets assigned a file descriptor. The file descriptors for <tt class="FILENAME">stdin</tt>, <tt class="FILENAME">stdout</tt>, and <tt class="FILENAME">stderr</tt> are 0, 1, and 2, respectively.</p>
+
+<p>A simple example showing redirection to a file is shown below.</p>
+
+<pre><span class="bluebox2">$ ls &gt; myfiles.txt</span></pre>
+<p>In this example the <tt class="user">ls</tt> command is executed and the results are written in a file called myfiles.txt. Since the output of <tt class="user">ls</tt> was redirected to the file, no output will appear in the terminal window. Whenever the command above is repeated, myfiles.txt is overwritten with the output of the <tt class="user">ls</tt> command. If you would like the new results to be appended to the file instead you can use the <tt>&gt;&gt;</tt> operator. Be sure to try this for yourself.</p>
+
+<p>Often commands can take input from <tt class="FILENAME">stdin</tt>. By default, standard input gets its contents from the keyboard, but just like standard output it can be redirected. To redirect standard input from a file instead of the keyboard by using the <tt class="FILENAME">&lt;</tt> operator. Do a little reseach on this operator and try to redirect standard input from a file for yourself. You should also try to redirect both the input and output of a command. How might this be useful?</p>
+
+<p>Probably the most useful thing you can do with I/O redirection is to connect multiple commands together using pipes. With pipes, the standard output of one command is fed into the standard input of another. An example of this is shown below.</p>
+
+<pre><span class="bluebox2">$ ls -lt | head</span></pre>
+<p>Can you see what is happening here? What does the <tt class="user">head</tt> command do?</p>
+
+<p>The <tt class="user">head</tt> command used in the example above is an example of a filter. There are many filters that you can use, including common ones such as <code>grep</code>, <code>tail</code>, <code>sort</code>, <code>awk</code> and <code>sed</code>. You should experiment with these filters to familiarise yourself with their usage.</p>
+
+<h3>Regular Expressions</h3>
+
+<p>There are several varieties of regular expressions, including basic, extended and many others. This lab focuses on basic regular expressions (BRE), which is what the <code>grep</code> and <code>sed</code> commands use by default. You will find many good references for basic regular expressions online, so do take the time to find one that you are comfortable with. An online regex checker is also linked at the bottom of this page but be aware that this works with extended regular expressions and so may not be fully compatible with what you wish to test.</p>
+
+<p>The <code>grep</code> command is used for selecting lines. You have already met the <code>grep</code> command in the context of selecting lines from input based on a specified string. To base this selection on a set of possible strings, rather than on a single string, you can specify a regular expression rather than a string. For instance, if for some reason you want to select all lines that contain either <code>echo</code> or <code>printf</code> in the <code>infotutorial</code> script, here is how you would do it:</p>
+
+<pre><span class="bluebox2">$ cat ./infotutorial | grep 'echo\|printf'</span></pre>
+<p>Can you generalise this statement to find all lines that contain a number? There is a simple way of doing this by using [ and ], as shown in the <a href="http://www.zytrax.com/tech/web/regex.htm">reference</a> page. Try to achieve the same result using this simple method.</p>
+
+<p>Suppose now that you wanted to find all 5 letter words that end in 'ing'. You can use a regular expression combined with the dictionary <code>/usr/share/dict/words</code> to do this. Note that the simple use of <code>grep</code> shown below will not work, as this finds any word that contains 'ing' anywhere in it.</p>
+
+<pre><span class="bluebox2">$ cat /usr/share/dict/words | grep &quot;ing&quot;</span></pre>
+<p>You can resolve this problem using a regular expression.</p>
+
+<pre><span class="bluebox2">$ cat /usr/share/dict/words | grep '^..ing$'</span></pre>
+<p>In the this command, <code>^</code> denotes the beginning of a line, <code>$</code> means the end of line and a dot matches any character. A more general solution exists, where you can specify how many characters you want using <code>{n}</code>. You should combine this with [ ] to select all words where the first 2 letters are vowels and the word ends with 'ing' but the word can otherwise be any length. You may find you need to escape the braces with <code>\</code>; this is one of the downsides of BREs and is something dealt with in <a href="https://en.wikipedia.org/wiki/Regular_expression#POSIX_basic_and_extended">extended regular expressions</a> (ERE). Consult the man pages for grep and sed to see how to make them use ERE instead of BRE.</p>
+
+<p>Now suppose you wanted to find and replace some words in a text file. You could do this manually using find and replace in a text editor. However, you could also write a script to automate the task. Here is an example which replaces 'plus' with '+':</p>
+
+<pre><span class="bluebox2">$ echo &quot;x is 5 plus 6&quot; | sed 's/plus/+/g'</span></pre>
+<p>We now use <code>sed</code> instead of <code>grep</code>. In the expression <code>s/plus/+/g</code>, the 's' means substitute the second part (separated by '/') for the first and the 'g' means do this everywhere rather than just on the first occurrence (i.e. &quot;global&quot;). In a previous week you wrote a <code>sum</code> script using a <code>for</code> loop. It is possible to achieve the same effect in one line (without error checking) using regular expressions. Below is a template, can you fill in the regular expression? Think about the form of input that <code>expr</code> takes.</p>
+
+<pre><span class="bluebox2">#!/bin/bash<br />expr $(echo $* | sed '')<br />exit 0</span></pre>
+<p>Something more challenging than finding words in the dictionary is finding words in a piece of text. Suppose you wanted to extract all words in this web page (save the webpage's HTML as lab5.html) which start with 'w'. The following expression will almost do this:</p>
+
+<pre><span class="bluebox2">$ cat ./lab5.html | sed 's/[^a-z][^w][a-z]*//g'</span></pre>
+<p>To improve the result you could first remove all html tags. Try doing this and see if it gives a better result. You can explore further possible improvements by trial and error, but don't worry too much about getting this perfect.</p>
+
+<p>Sometimes you need to use a string that was matched in a pattern when making a substitution. This can be done by identifying one or more groups of characters in the match by putting <code>\( \)</code> around part of the pattern and then using <code>\1</code> or <code>\2</code> etc to designate these groups in making the substitution. An example of this is given below (although note that <code>finger</code> is not installed on all machines, but it should be working on joshua).</p>
+
+<pre><span class="bluebox2">$ finger -m $(whoami) | head -n 1 | sed 's/^.*Name: \([A-Za-z]\+\)/\1/'</span></pre>
+<p>Play around with these expressions. Trial and error really is the only way to learn regular expressions. Come up with your own problems and document your solutions in your lab diary.</p>
+
+<h3>Further Resources</h3>
+
+<ul>
+  <li><a href="http://www.regexr.com/">RegExr</a> - an online regex checker</li>
+</ul>
+
+<ul>
+  <li>
+    <p>If you want to learn more about Linux, Bash or shell scripting in general please check out the tutorials available <a href="http://bash.cyberciti.biz/guide/Main_Page">here</a>. This guide offers an indepth view of many different areas of shell scripting and will serve as a good complement to the course for either those who want to study more or need to brush up.</p>
+
+  </li>
+</ul>
+
+
+
+                                
+                                
+                            
+                        </div></div>
+                        
+                    </div>
+                    
+                </div>
+
+                
+            </main>
+
+            
+
+            
+
+    
+    
+
+
+<footer class="id7-page-footer id7-footer-coloured">
+    <div class="id7-site-footer">
+
+        
+
+        
+        
+
+        
+
+        
+            
+            
+                
+            
+        
+
+        <div class="pull-left"> 
+  <p>Department of Computer Science, University of Warwick, CV4 7AL <br />
+     E-mail: <span id="email2146128218">&#x63;&#111;&#x6d;&#x70;&#x2d;&#115;&#x63;&#105;&#x20;&#97;&#x74;&#x20;&#100;&#x63;&#x73;&#x20;&#x64;&#x6f;&#x74;&#x20;&#x77;&#97;&#x72;&#x77;&#x69;&#99;&#107;&#x20;&#x64;&#111;&#x74;&#x20;&#x61;&#99;&#32;&#100;&#x6f;&#x74;&#32;&#117;&#x6b;</span>, Telephone: <a href="tel:+442476523193">+44 (0)24 7652 3193</a>  </p>
+
+</div>
+
+<div class="pull-right fa-social-icons brand-text"><a href="https://www.facebook.com/warwickdcs/" title="DCS on Facebook"><i class="fa fa-facebook fa-3x fa-fw"></i><span class="sr-only">Facebook</span></a> <a href="https://twitter.com/WarwickDCS" title="DCS on Twitter"><i class="fa fa-twitter fa-3x fa-fw"></i><span class="sr-only">Twitter</span></a> <a href="https://www.linkedin.com/grps?gid=38372" title="DCS on LinkedIn"><i class="fa fa-linkedin fa-3x fa-fw"></i><span class="sr-only">YouTube</span></a></div>
+
+
+    </div>
+    <div class="id7-app-footer">
+
+        
+            <div class="id7-logo-bleed"></div>
+        
+
+        
+            <div id="page-footer-elements" class="nofollow clearfix page-footer-elements">
+                <div id="email-owner-div" style="display:none;">
+                    <div id="email-owner-div-inner">
+                        <img id="email-owner-popup-close-button" src="http://www2.warwick.ac.uk/static_war/popup/close.png" alt="Close this email form">
+
+                        <div id="email-owner-div-content"></div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li>
+
+
+
+
+
+
+ 
+  
+  
+  
+  
+  
+  
+	
+	Page contact: <a id="email-owner-link" href="/sitebuilder2/api/ajax/emailOwner.htm?page=%2ffac%2fsci%2fdcs%2fteaching%2fmaterial%2fcs133%2fterm1%2flabs%2flab5" class="no-print-expand" title="Send an email to Mike Joy" rel="nofollow">Mike Joy</a>
+  
+
+</li>
+                    <li>Last revised: Tue 13 Oct 2015</li>
+                </ul>
+            </div>
+        
+
+        <div class="id7-footer-utility">
+            <ul>
+                <li id="powered-by-link">
+                    Powered by <a href="http://warwick.ac.uk/sitebuilder" title="More information about SiteBuilder">Sitebuilder</a>
+                </li>
+
+                
+                    
+                    
+                        
+                        
+                        
+                        
+                        
+                    
+                
+
+                <li id="copyright-link"><a href="http://warwick.ac.uk/copyright" title="Copyright Statement">&copy; MMXVI</a></li>
+
+                
+                    <li id="terms-link"><a href="http://warwick.ac.uk/terms/general" title="Terms of use">Terms</a></li>
+                
+
+                <li id="privacy-link"><a href="http://warwick.ac.uk/privacy" title="Privacy statement">Privacy</a></li>
+
+                <li id="cookies-link"><a href="http://warwick.ac.uk/cookies" title="Information about cookies">Cookies</a></li>
+
+                <li id="accessibility-link"><a href="http://go.warwick.ac.uk/accessibility" title="Accessibility information [0]" accesskey="0">Accessibility</a></li>
+
+                
+            </ul>
+        </div>
+    </div>
+</footer>
+        </div>
+        <div class="id7-right-border"></div>
+
+        
+		
+	
+	
+
+	
+
+<!-- New analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('require', 'linkid', 'linkid.js');
+
+
+
+ga('create', 'UA-1022818-8', 'auto', 'global1');
+ga('global1.send', 'pageview', '\/fac\/sci\/dcs\/teaching\/material\/cs133\/term1\/labs\/lab5');
+
+ga('create', 'UA-40911470-1', 'auto', 'global2');
+ga('global2.send', 'pageview', '\/fac\/sci\/dcs\/teaching\/material\/cs133\/term1\/labs\/lab5');
+
+
+
+
+
+	
+	
+var _gaq = _gaq || [];
+_gaq.push(['_require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js']);
+
+
+_gaq.push(['site._setAccount', 'UA-27588828-1']);
+_gaq.push(['site._trackPageview', '\/fac\/sci\/dcs\/teaching\/material\/cs133\/term1\/labs\/lab5']);
+_gaq.push(['site._trackPageLoadTime']);
+
+var analyticsLoad = function() {
+	var s    = document.createElement('script');
+	s.src    = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	s.type   = "text/javascript";
+	s.async  = true;
+	(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(s);
+};
+if (window.Event && Event.observe) {
+	Event.observe(window, 'load', analyticsLoad);
+} else {
+	var oldLoad = window.onload;
+	window.onload = function() {
+		if (typeof oldLoad == 'function') oldLoad();
+		analyticsLoad();
+	};
+}
+	
+
+
+</script>
+
+
+    </body>
+</html>

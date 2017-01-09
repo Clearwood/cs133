@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS133 Professional Skills Lab Diary</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="../diary.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+<body>
+<nav class="nav navbar-default" id="nav">
+<div class="container-fluid">
+<a class="navbar-brand" href="../index.html">
+ HOME
+</a>
+<a class="navbar-brand" href="../lab1/index.html">LAB 1</a>
+		<a class="navbar-brand" href="../lab2/index.html">LAB 2</a>
+		<a class="navbar-brand" href="../lab3/index.html">LAB 3</a>
+		<a class="navbar-brand" href="../lab5/index.html">LAB 5</a>
+		<a class="navbar-brand" href="../lab6/index.html">LAB 6</a>
+</div>
+</nav>
+<div class="container-fluid">
+<h1>Lab 4: Introduction to LaTeX</h1>
+This lab was all about LaTeX, a markup tool to create articles, books or scientific reports. 
+Having no previous experience with the TeX typesetting system this lab was esspecially interesting for me.
+LaTeX documents have to be compiled before it's possible to actually see the layout of the page, pictures and references.
+<h2>Getting started with LaTeX</h2>
+<ol>
+	<li>
+	<h4>an introduction</h4>
+	In the first part of the lab I learned all about how a general latex document is structured. It has a preamble which sets document properties and which
+	can be used to import additional features. For example a preamble would define the title, author and date.
+	<h4>An example preamble: </h4>
+	<div class="container-fluid wrapper">
+	<pre class="cod prettyprint">
+	\title{Hello World!}
+	\author{John Doe}
+	\date{\today}
+	</pre>
+	</div>
+	In the content part of the document the content of the document is placed.
+	It seems to begin with the <code>\begin{document}</code> command and ends with the <code>\end{document}</code> command.
+	<h4>A basic content of a LaTeX document could be the following: </h4>
+	<div class="container-fluid wrapper">
+	<pre class="cod prettyprint">
+	\begin{document}
+	Hello World!
+	\end{document}
+	</pre>
+	</div>
+	</li>
+
+	<li>
+	<h4>The document class</h4>
+	To create a sample LaTeX document which uses a 12 pt font, two columns and the document class the following code would be needed:
+	<div class="container-fluid wrapper">
+<pre class="cod prettyprint">
+\documentclass[12pt,a4paper,twocolumn]{article}
+\begin{document}
+The world is a beautiful but dangerous place and writing code is 
+a lot less dangerous than many other activities.
+But to truly experience the beauty of nature
+it is essential to leave the house at least once a month.
+\end{document}
+</pre>
+	</div>
+	</li>
+	<h4>Sectioning of content</h4>
+	<li> To section the content of a LaTeX document there are several commands to use. For documents of type book or report the top-level command is the 
+	<code>\chapter</code>, articles have the <code>\section</code> command as the top-level sectioning command. Every section has a text size dependent on the level
+	of the command, normally gets printed in bold and a number dependent on this. The sectioning of the document can be displayed upfront using the <code>\tableofcontents</code> command.
+	To include quotes in a document backtick and apostrophes are used like this:
+	<div class="code">``You are amazing''</div>
+	</li>
+	<h4>Laying out content</h4>
+  <li>In LaTeX there are some embedded environments which can be used for the document to provide extended functionality. In this part we are starting the <code>enumerate</code> and the <code>itemize</code>
+  environments to provide the functionality of using numbered and bullet pointed lists. It is pretty easy to use them, first it is necessary to start the environment and after
+  that the <code>\item</code> command can be used to add items to the list.
+</li>
+<h4>Figures</h4>
+  <li>Similar to this there is another environment to insert graphs or pictures into a document which means that in most cases this environment will be used.
+  This environment is not native to LaTeX which means I have to explicitly signal the compiler that I want to use the package with the <code>\usepackage{graphicx}</code> command.
+  Similar to the different list environments, to include a picture in the document the figure environment first has to be started. Apparently these environments can also
+  be nested together to provide further functionality, for example a <code>center</code> environment can be placed inside a <code>figure</code> environment to center a picture.
+  I included a picture of a CAD project I did in my free time to text this functionality of LaTeX.
+  <div class="container-fluid wrapper">
+  <pre class="cod prettyprint">
+  \begin{figure}[h]
+	\includegraphics[width=80mm]{/user/Downloads/cad.png}
+	\caption{The solution for our milk leakage problem}
+	\label{reflabel}
+  \end{figure}
+  </pre>
+  </div>
+  <img class="img img-responsive" src="./cad.jpg"/>
+  </li>
+  <h4>Maths</h4>
+<li>
+It took me some time to get my head around the equation environment of LaTeX. Basically it allows the user to insert mathematical equations and variables into
+every document using the equation environment. After reading through a few more documents I got to include the quadratic equation to include into the document.
+<div class="container-fluid wrapper">
+  <pre class="cod prettyprint">
+\begin{equation}
+    x = \frac{-b \pm \sqrt{{b}^2 - 4ac}}{2a}
+\end{equation}
+</pre>
+</div>
+<img class="img img-responsive" src="./equation.jpg"/>
+  </li>
+<h4>Referencing</h4>
+<li>
+Apparently it is possible to reference a figure using the <code>\ref{reference}</code> command.
+</li>
+  </ol>
+
+
+<h2>Commands:</h2>
+<ul>
+	<li><code>\documentclass</code>: Normally that's the first line of a LaTeX document. It specifies general options of the document. An example could be:
+	<div class="code">\documentclass[11pt,a4paper,twoside]{book}</div>
+	</li>
+  <li><code>pdflatex</code>: A little program which compiles latex documents into a postscript or PDF document. An example of its usage would be:
+    <div class="code"> pdflatex myfirstla.tex
+    </div>
+    <li><code>\chapter{Chapter Title}</code>: Is used to create a chapter of reports or books. For those document types it is the top-level sectioning command.
+	</li>
+	<li><code>\section{section title}</code>: Is used to create a section of a document.</li>
+	<li><code>\subsection{subsection title}</code>: Can be used to create a subsection to section a section.</li>
+	<li><code>\subsubsection{subsubsection title}</code>: To section a subsection this command can be used.</li>
+    <li><code>\tableofcontents</code>: creates a table of contents.
+	</li>
+	<li><code>\appendix</code>: Is used to put some content in appendices.</li>
+	<li><code>\usepackage{package}</code>: Gives the possibility to use a specific package in a LaTeX document.</li>
+	<li><code>\includegraphics[width=80mm]{Path/To/File.png}</code>: is used to include a picture in a document. </li>
+	<li><code>\label{label}</code>: is used to label a figure. </li>
+	<li><code>\ref{reference}</code>: is used to reference a figure. </li>
+</ul>
+</div>
+</body>
+</html>

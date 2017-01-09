@@ -1,0 +1,6 @@
+Permissions for hey: 	drwxrwxrwx\n
+hey/:	drwxrwxrwx\n
+hey/hey:	drwxrwxrwx\n
+hey/hey/hey.txt:	drwxrwxrwx\n
+hey/s.pptx:	drwxrwxrwx\n
+hey/xaa:	drwxrwxrwx\n

@@ -1,0 +1,7 @@
+THESE ARE THE FILES EXISTING HERE
+hey/ is a directory
+drwxrwxrwx 2 root root     0 Jan  7 16:49 hey
+-rwxrwxrwx 1 root root     0 Jan  7 13:45 hey.txt
+hey/hey is a directory
+drwxrwxrwx 2 root root     0 Jan  7 16:49 hey
+-rwxrwxrwx 1 root root     0 Jan  7 13:45 hey.txt

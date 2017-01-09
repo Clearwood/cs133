@@ -1,0 +1,422 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2015.12.1)  17 NOV 2016 11:55
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ars
+(./ars.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
+(./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 210mm x 297mm (a4) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is an 11 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\c@ALC@unique=\count94
+\c@ALC@line=\count95
+\c@ALC@rem=\count96
+\c@ALC@depth=\count97
+\ALC@tlm=\skip44
+\algorithmicindent=\skip45
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count98
+))
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 9.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+) (./ars.aux)
+\openout1 = `ars.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+-- Lines per column: 52 (exact).
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count99
+\scratchdimen=\dimen126
+\scratchbox=\box28
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen127
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks17
+)
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ¶ in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no î in font ptmr7t!
+Missing character: There is no ≈ in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no í in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no £ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ï in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no î in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no ó in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no § in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ª in font ptmr7t!
+Missing character: There is no ¬ in font ptmr7t!
+Missing character: There is no ´ in font ptmr7t!
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.69997> on input line 54.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.5> on input line 54.
+
+! Undefined control sequence.
+l.60 \lstset
+            {
+? quit
+OK, entering \batchmode...
+
+! LaTeX Error: Undefined color `{deepblue}'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 keywordstyle=\ttb\color{{deepblue}}
+                                        ,
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 \begin{lstlisting}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--69
+[]\OT1/ptm/m/n/11 language=Python, ba-sic-style=\T1/txtt/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--69
+\T1/txtt/m/n/12 keywordstyle=\T1/txtt/bx/n/12 , stringstyle=[], frame=tb,
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 71.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <11> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 \end{lstlisting}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.77 \lstinputlisting
+                     {Ex1.java}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+ (./ars.bbl
+Underfull \hbox (badness 7522) in paragraph at lines 70--1
+[]\OT1/ptm/m/n/11 public class Hel-loWorld \OMS/cmsy/m/n/10.95 f \OT1/ptm/m/n/1
+1 pub-lic static void
+ []
+
+) [1{/usr/share/texlive/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+] (./ars.aux) ) 
+Here is how much of TeX's memory you used:
+ 2086 strings out of 495063
+ 32981 string characters out of 3182201
+ 88540 words of memory out of 3000000
+ 5294 multiletter control sequences out of 15000+200000
+ 34445 words of font info for 67 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 26i,6n,19p,448b,296s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/txfonts/t1xbtt.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/txfonts/t1xtt.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ars.pdf (1 page, 66205 bytes).
+PDF statistics:
+ 41 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

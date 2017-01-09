@@ -1,0 +1,15 @@
+#!/bin/sh
+sum=0
+ for a in $*
+do
+	case $a in 
+[0-9]*) 
+
+	let sum=sum+a;
+;;
+    *) echo "Arguments must be numbers.">&2; exit 1;;
+	esac
+done
+echo "$sum"
+exit 0 
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS133 Professional Skills Lab Diary</title>
+<link rel="stylesheet" type="text/css" href="../diary.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+<body>
+<nav class="nav navbar-default" id="nav">
+<div class="container-fluid">
+<a class="navbar-brand" href="../index.html">
+ HOME
+</a>
+<a class="navbar-brand" href="../lab2/index.html">LAB 2</a>
+		<a class="navbar-brand" href="../lab3/index.html">LAB 3</a>
+		<a class="navbar-brand" href="../lab4/index.html">LAB 4</a>
+		<a class="navbar-brand" href="../lab5/index.html">LAB 5</a>
+		<a class="navbar-brand" href="../lab6/index.html">LAB 6</a>
+</div>
+</nav>
+<div class="container-fluid">
+<h1>Lab 1: Introduction to Unix</h1>
+
+<h2>Exercises:</h2>
+<ol>
+
+	<li>
+	We had to connect to joshua to run our commands. Here is what I typed
+	<div class=code>ssh u1632823@joshua.warwick.ac.uk</div>
+	Apparently I can use PuTTY to do this from a Windows machine.
+	</li>
+
+	<li>
+	The <code>cp</code> command requires a source and a destination.
+	<div class=code>cp ~nick/cs133/infotutorial .</div>
+	This will copy the infotutorial script to my current directory.
+	</li>
+	
+	<li>To add a man page, it's possible to use the following line of code: 
+    <div class="code">export MANPATH=$(man -w):~/lab1resources/man
+</div></li>
+  <li>To access our files from the web I had to create a public_html directory.
+  <div class="code">mkdir ~/public_html</div></li>
+  <li>Inside this directory I changed the access permissions of a newly created index.html file and the public_html directory.
+  <div class="code">
+  cd ~/public_html/
+  touch index.html
+  chmod a+x ~/
+  chmod a+x ~/public_html/
+  chmod a+r ~/public_html/index.html
+</div></li>
+<li>After creating a cs133 directory inside my public_html directory I moved on creating sub-directories for all lab sessions and created this file from
+a template using the copy command.
+  <div class="code">cp ~/lab1ressources/diary_template.html ~/public_html/cs133/lab1/index.html</div></li>
+ <li>Finally I tried to get myself comfortable with the commands needed to print a file.
+  </li>
+</ol>
+
+<h2>Commands:</h2>
+<ul>
+	<li><code>cp</code>: Copy a file. Requires two arguments, source and destination. An example might be
+	<div class="code">cp ~nick/cs133/infotutorial ./infotutorial</div>
+	</li>
+
+  <li><code>chmod</code>: changes access permissions. An example might be
+    <div class="code"> chmod 711 ./index.html
+    </div>
+    <li><code>cd</code>: Changes the working directory
+	<div class="code">cd ..</div>
+	</li>
+    <li><code>ssh</code>: to remotely connect to a linux machine.
+	<div class="code">ssh u1632823@joshua.dcs.warwick.ac.uk</div>
+	</li>
+	<li><code>man</code>: this command let's you access a manual page for a specific command. An example would be:
+	<div class="code">man ls</div>
+	<li><code>ls</code>: lists all the files in a directory.
+	<div class="code">ls</div>
+	</li>
+	<li><code>touch</code>: creates a plain file.
+	<div class="code">touch index.html</div>
+	</li>
+	<li><code>lpr</code>: submits a printing job.
+	<div class="code">lpr -Pdcs006a info.pdf</div>
+	</li>
+	
+</ul>
+</div>
+</body>
+</html>
