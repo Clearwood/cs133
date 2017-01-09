@@ -15,7 +15,7 @@ declare -A files
 	let directory+=1
       elif [[ -f $file ]] ; then
          let files+=1
-	ftmp=$(stat --printf="%s" $file)
+	ftmp==$(stat --printf="%s" $file)
 	files[$file]=$ftmp
       fi
     done
@@ -23,10 +23,9 @@ declare -A files
 printf "Files found: $files (plus $hiddenF hidden)\n"
 printf "Directories found: $directory (plus $hiddenD hidden)\n"
 printf "Total files and directories: $(expr $files + $hiddenF + $hiddenD + $directory)\n"
-printf "The five biggest files are: \n"
 for k in "${!files[@]}"
 do
-    echo $k ' - ' $(numfmt --to=iec-i --suffix=B ${files["$k"]}) 
+    echo $k ' - ' ${files["$k"]}
 done |
-sort -rh -k3 |
+sort -rn -k3 |
 head -n 5
