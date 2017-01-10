@@ -49,5 +49,7 @@ done |
 #pipes that output into the sort command
 sort -rh -k3 |
 #it will sort in reverse order the human readable form of the file size
-head -n 5
+head -n 5 |
 #piped into the head command on the screen will only appear the five biggest files
+column -t
+#formats the output into nice columns

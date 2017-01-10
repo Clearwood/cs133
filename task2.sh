@@ -12,19 +12,10 @@ directory=0
 #sets a counter for all normal directories
 files=0
 #sets a cunter for all files
-tmp=$(stat -c %A $1)
-#sets the variable tmp to the file permissions of the directory which should be examined
-printf "Permissions for $1: 	$tmp\n" > tmp.txt
+printf "Permissions: \n" > tmp.txt
 #prints the permissions into the temporary text file
 printf "wrong permissions: \n" > permission.txt
 #prints a header for the temporary permission.txt file
-if [[ "$tmp" != "drwxr-xr-x" ]]; then
-#checks if the directory has the correct permissions otherwise changes them
-# and saves a log into the permission.txt file
-	printf "Directory $1 has the wrong permission: $tmp\n" >> permission.txt
-	chmod 755 $1
-	printf "This has been changed to: drwxr-xr-x\n" >> permission.txt
-fi
     for file in "$1"/**; do
 	#iterates thrugh all files, directories and subdirectories dependent of the directory given as an argument
       if [[ -d $file &&  "$(basename "$file")" == .?* ]]; then
@@ -42,9 +33,9 @@ fi
 	#appends the permissions of the directory to the temporary text file
 	if [[ "$dtmp" != "drwxr-xr-x" ]]; then
 	#checks if the directory has the correct permissions
-		printf "Directory $file has the wrong permission: $dtmp\n" >> permission.txt
+		printf "Directory $file has the wrong permission:	$dtmp\n" >> permission.txt
 		chmod 755 $file
-		printf "This has been changed to: drwxr-xr-x\n" >> permission.txt
+		printf "This has been changed to:	drwxr-xr-x\n" >> permission.txt
 		#otherwise the permissions are corrected and the operation is logged
 	fi
       elif [[ -f $file ]] ; then
@@ -56,9 +47,9 @@ fi
 	#appends the permissions of the file to the temporary text file
 	if [[ "$ftmp" != "-rw-r--r--" ]]; then
 	#checks if the file has the correct permissions
-		printf "The file $file has the wrong permission: $ftmp\n" >> permission.txt
+		printf "The file $file has the wrong permission:	$ftmp\n" >> permission.txt
 		chmod 644 $file
-		printf "This has been changed to: -rw-r--r--\n" >> permission.txt
+		printf "This has been changed to:	-rw-r--r--\n" >> permission.txt
 		#otherwise the permissions are corrected and the operation is logged
 	fi
       fi
@@ -70,13 +61,15 @@ printf "Directories found: $directory (plus $hiddenD hidden)\n"
 printf "Total files and directories: $(expr $files + $hiddenF + $hiddenD + $directory)\n"
 while read line
 do
-    printf "%s\n" "$line"
-done < "tmp.txt"
+    printf "%s\n" "$line" 
+done < "tmp.txt" |
+column -t
 #the first text file is printed to the screen
 while read line
 do
-    printf "%s\n" "$line"
-done < "permission.txt"
+    printf "%s\n" "$line" 
+done < "permission.txt" |
+column -s "	" -t
 #the second text file is printed to the screen
 #both temporary files are removed
 rm -f tmp.txt 
