@@ -215,7 +215,7 @@ $ ls -all
 \end{tabular}
 \end{center}
 \item \textbf{touch}: creates a plain text file.
-\item \textbf{expr}: can be used to evaluate arithmetic expressions. For expample the following equation can be solved by this command:
+\item \textbf{expr}: can be used to evaluate arithmetic expressions. For example the following equation can be solved by this command:
 \begin{equation}
 5 + 5 = x
 \end{equation}
@@ -229,6 +229,44 @@ $ 10
 \end{lstlisting}
 \end{tabular}
 \end{center}
+\end{itemize}
+\subsection{vim}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{./vim.jpg}
+\caption{My favorite text editor}
+\label{vim}
+\end{center}
+\end{figure}
+The text editor I came to love over the last months is vim as a very easy to use command line tool.
+Vim can be started up with a specified file or on its on.
+
+\begin{center}
+\begin{tabular}{c}
+\begin{lstlisting}[language=bash]
+$ vim index.html
+# starts up vim and opens the file index.html
+$ vim
+# just starts up vim on its on
+\end{lstlisting}
+\end{tabular}
+\end{center}
+At this point I want to talk about a few possibilities and modes vim provides:
+\begin{itemize}
+\item \textbf{Insert mode}: Starting up vim the user is in read mode which means the content of a file
+can not be edited. To edit the files content the insert mode has to be selected by typing \textbf{I}.
+\item \textbf{Selecting content in vim}: By escaping the inserting mode by pressing the \textbf{Esc} key
+a new mode can be selected. Opening up the visual mode by selecting \textbf{V} text can be selected.
+\item \textbf{Copying and Cutting text}: Selected text can  be copied by using \textbf{y} and cut by using \textbf{d}. 
+It can be inserted by using \textbf{p} to insert text after the line the cursor is pointing to and can be
+inserted before the current line using \textbf{P}
+\item \textbf{tabs}: On element of vim I enjoy a lot are tabs. A new document can be opened in a tab using
+\textbf{:tabe document}. There is the possibility to change between the tabs using \textbf{:tabn} to change to the
+next tab or \textbf{:tabp} to change to the previous tab.
+\item \textbf{using bash inside vim}: using \textbf{:!} it is possible to execute any bash command inside vim.
+\item \textbf{saving files}: Files can be written using \textbf{:w}. 
+\item \textbf{quitting the program}: The program can be quit using \textbf{:q}.
 \end{itemize}
 \bibliographystyle{plain}
 \bibliography{references}

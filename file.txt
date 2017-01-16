@@ -1,0 +1,16 @@
+hey/CommandLine.jpg: 
+hey/hey/hey.txt: 
+hey/LinuxGuide.pdf: 
+hey/LinuxGuide.tex.swp: 
+hey/manual.jpg: 
+hey/s.pptx: 
+hey/.txt.txt: 0
+hey/xaa: 0
+hey/CommandLine.jpg: 9535
+hey/hey/hey.txt: 0
+hey/LinuxGuide.pdf: 233924
+hey/LinuxGuide.tex.swp: 24576
+hey/manual.jpg: 122920
+hey/s.pptx: 0
+hey/.txt.txt: 0
+hey/xaa: 95
